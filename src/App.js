@@ -1,11 +1,11 @@
-import React from "react";
+import React,{useState} from "react";
+import PizzaHeader from './Components/PizzaHeader'
+import Pizza from './Components/Pizza'
+import OrderForm from './Components/OrderForm'
 
 const App = () => {
   return (
-    <>
-      <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
-    </>
+    <PizzaHeader/>
   );
 };
 export default App;
