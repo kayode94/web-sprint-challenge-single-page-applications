@@ -38,7 +38,7 @@ const App = () => {
 
   }
 
-  const onChange = (name, value) =>{
+  const pizzaUpdater = (name, value) =>{
     setOrderValues({...orderValue, [name]: value})
   }
 
@@ -68,8 +68,8 @@ const App = () => {
       <Route path = '/pizza'>
       <OrderForm 
           orderValue={orderValue} 
-          onSubmit={onSubmit}
-          onChange={onChange}
+          submit={onSubmit}
+          updater={pizzaUpdater}
           errors={formErros}
           onInputChange={onInputChange}/>
 

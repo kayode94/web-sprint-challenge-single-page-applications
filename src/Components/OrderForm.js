@@ -1,18 +1,18 @@
 import React from 'react'
 
 const OrderForm = (props) =>{
-    const {orderValue, onSubmit, onChange, errors, onInputChange}=props
-
+    const {orderValue, updater, submit, errors, onInputChange}=props
     const change=(event=>{
         const {name, value, checked, type} = event.target
-        type === 'checkbox' ? onSubmit(name, checked) : onSubmit(name, value)
-        type === 'checkbox' ? onInputChange(name, checked) : onInputChange(name, value)
+        type==='checkbox' ? updater(name, checked) : updater(name, value)
+        type==='checkbox' ? onInputChange(name, checked) : onInputChange(name, value)
     })
 
     const submitForm = (event=>{
         event.preventDefaul()
-        onChange()
+        submit()
     })
+    
     return(
         <form onSubmit={submitForm}>
             <label>
