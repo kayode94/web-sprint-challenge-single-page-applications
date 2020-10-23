@@ -9,7 +9,7 @@ const OrderForm = (props) =>{
     })
 
     const submitForm = (event=>{
-        event.preventDefaul()
+        event.preventDefault()
         submit()
     })
     
